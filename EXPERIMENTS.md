@@ -48,7 +48,7 @@ Gunakan template di bawah untuk SETIAP eksperimen.
 > LR kecil cocok untuk model ini, karena model menunjukkan bahwa model sedang belajar dengan efektif dan bergerak menuju solusi optimal tanpa overshooting atau kesulitan menemukan arah, hasilnya model dapat menghasilkan akurasi yang lebih tinggi daripada hasil sebelumnya 
 
 **Rencana eksperimen berikutnya:**
-> Optimizer saya ubah menjadi adam karena optimizer adam seringkali memberikan kinerja yang sangat baik dalam model yang sudah memberikan akurasi baik, epoch saya naikkan agar model dapat belajar lebih dalam dan memperbaiki kesalahan model, meningkatkan neuron per layer menjadi 512 agar kapasitas pembelajaran model lebih optimal.
+> Optimizer saya ubah menjadi adam karena optimizer adam seringkali memberikan kinerja yang sangat baik dalam model yang sudah memberikan akurasi baik, epoch saya naikkan agar model dapat belajar lebih dalam dan memperbaiki kesalahan model, meningkatkan neuron per layer menjadi 512 agar kapasitas pembelajaran model lebih optimal, terakhir saya ubah dropout rate dari 0.3 ke 0.0-0.1 karena tidak adanya over/underfitting.
 
 ---
 
