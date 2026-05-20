@@ -55,12 +55,20 @@ Gunakan template di bawah untuk SETIAP eksperimen.
 ### Eksperimen #2
 
 **Apa yang diubah:**
+> Menambah hidden layers dari 1 menjadi 2. Mengganti fungsi aktivasi dari relu menjadi tanh. Mengganti optimizer dari sgd menjadi adam. Menurunkan learning rate dari 0.01 menjadi 0.0001. Mengurangi batch size dari 32 menjadi 16. Mengurangi jumlah epochs dari 10 menjadi 5. Menambahkan dropout rate dari 0.0 menjadi 0.1.
 
 **Hipotesis:**
+> Penggunaan optimizer Adam dipadukan dengan learning rate yang jauh lebih kecil (0.0001) akan membuat konvergensi model berjalan lebih stabil dan terarah. Penambahan satu hidden layer bertujuan meningkatkan kapasitas model dalam mempelajari pola, sementara penambahan dropout 0.1 berfungsi sebagai langkah preventif untuk mencegah overfitting meskipun model memiliki arsitektur yang lebih kompleks.
 
 **Hasil:**
+- Test accuracy: ~85%
+- Train accuracy: ~86%
+- Validation accuracy: ~86%
+- Train time: ~50 detik
+- Apakah overfit/underfit? tidak ada ovefit ataupun underfit dari hasil training model ini.
 
 **Observasi:**
+Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai performa baseline (~85%). Hal ini menunjukkan bahwa kombinasi optimizer Adam dan fungsi aktivasi tanh membuat model belajar dengan cukup efisien. Grafik pergerakan loss dan accuracy terlihat mulus. Kurva antara data train dan validation saling berhimpitan, menandakan bahwa dropout 0.1 berhasil menjaga model agar dapat menggeneralisasi data dengan baik. Karena grafik loss masih menunjukkan tren menurun di akhir epoch ke-5 tanpa tanda-tanda memisah dari kurva validasi, model ini kemungkinan belum mencapai performa maksimalnya. Menambah jumlah epochs pada eksperimen selanjutnya dapat memberikan ruang lebih bagi model untuk mencapai akurasi yang lebih tinggi.
 
 ---
 
