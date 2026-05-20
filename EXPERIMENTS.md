@@ -75,12 +75,20 @@ Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai
 ### Eksperimen #3
 
 **Apa yang diubah:**
+>Mengurangi jumlah hidden layers dari 5 menjadi 2. Mengurangi jumlah neurons per layer dari 512 menjadi 128. Mengganti fungsi aktivasi dari sigmoid menjadi tanh. Mengganti optimizer dari rmsprop menjadi adam. Menaikkan learning rate secara signifikan dari 0.001 menjadi 0.1. Mengurangi batch size dari 512 menjadi 16. Mengurangi jumlah epochs dari 50 menjadi 20. Menurunkan dropout rate dari 0.5 menjadi 0.1.
 
 **Hipotesis:**
+>Penggunaan optimizer Adam dan fungsi aktivasi tanh diharapkan dapat mempercepat konvergensi di awal training dibandingkan kombinasi sigmoid dan rmsprop pada baseline. Namun, lonjakan learning rate yang sangat ekstrem (0.1) dipadukan dengan batch size kecil (16) diprediksi akan membuat pembaruan bobot menjadi terlalu agresif dan tidak stabil. Arsitektur yang diperkecil (2 layers, 128 neurons) mungkin akan membatasi kapasitas model, tetapi penurunan dropout menjadi 0.1 dilakukan agar model tidak terlalu terhambat dalam mempelajari pola data yang ada.
 
 **Hasil:**
+- Test accuracy: 10.00%
+- Train accuracy: 9.87%
+- Validation accuracy: 9.85%
+- Train time: ~327 detik
+- Apakah overfit/underfit? Model mengalami kegagalan belajar total akibat overshooting (underfitting ekstrem).
 
 **Observasi:**
+>Hasil akurasi yang tertahan di kisaran ~10% (dengan loss mencapai 4.9323) mengonfirmasi bahwa model sama sekali tidak belajar dan hanya menebak secara acak sejak awal epoch. Penyebab utamanya adalah nilai learning rate yang terlalu besar (0.1) untuk ukuran optimizer adaptif seperti Adam. Hal ini memicu terjadinya overshooting, di mana pembaruan bobot terlalu ekstrem hingga melompati titik minimum dan merusak fungsi pemetaan grafiknya. Dari sisi efisiensi waktu, meskipun kapasitas model diperkecil, waktu training tetap membengkak hingga ~327 detik untuk 20 epochs. Ini membuktikan bahwa batch size yang sangat kecil (16) menciptakan terlalu banyak iterasi per epoch, sehingga meningkatkan overhead komputasi secara keseluruhan.
 
 ---
 
