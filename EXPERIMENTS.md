@@ -94,8 +94,8 @@ Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai
 
 **Hasil:**  
 - Test accuracy: ~85%  
-- Train accuracy: ~84%  
-- Validation accuracy: ~85%  
+- Train accuracy: ~87%  
+- Validation accuracy: ~86%  
 - Train time: ~53 detik  
 - Apakah overfit/underfit?: tidak terdapat overfitting maupun underfitting karena performa train dan validation masih stabil.
 
