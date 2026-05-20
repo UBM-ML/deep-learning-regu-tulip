@@ -16,7 +16,7 @@ Isi tabel ini setelah selesai semua eksperimen.
 | 1 |   4    | 256     |   selu     |  adamax   |   0.1  |   128 |  20    |  0.3    |  ~64%    |  ~176s     |
 | 2 |  2     | 64      |    tanh    |   adam    | 0.0001 |  16   |   5    |  0.1    |   ~85%   |   ~50s     |
 | 3 |   2    | 128     |     tanh   |   adam    |   0.1  |   16  |  20    |  0.1    |    ~10%  |  ~327s     |
-| 4 |    4    |    64     |       sigmoid     |    adam       |   0.01     |    0.01   |     32   |     10    |    ~85%      |       ~53s     |
+| 4 |    4    |    64     |       sigmoid     |    adam       |   0.01     |    32   |     10  |     0.3    |    ~85%      |       ~53s     |
 | 5 |        |         |            |           |        |       |        |         |          |            |
 
 > **Eksperimen #0** = baseline (jangan ubah, ini patokan kalian).
