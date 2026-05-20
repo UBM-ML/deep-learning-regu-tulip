@@ -13,7 +13,7 @@ Isi tabel ini setelah selesai semua eksperimen.
 | # | Hidden | Neurons | Activation | Optimizer | LR     | Batch | Epochs | Dropout | Test Acc | Train Time |
 |---|--------|---------|------------|-----------|--------|-------|--------|---------|----------|------------|
 | 0 | 1      | 64      | relu       | sgd       | 0.01   | 32    | 10     | 0.0     | ~85%     | ~30s       |
-| 1 |        |         |            |           |        |       |        |         |          |            |
+| 1 |   4    | 256     |   selu     |  adamax   |   0.1  |   128 |  20    |  0.3    |  ~64%    |  ~176s     |
 | 2 |        |         |            |           |        |       |        |         |          |            |
 | 3 |        |         |            |           |        |       |        |         |          |            |
 | 4 |        |         |            |           |        |       |        |         |          |            |
