@@ -74,24 +74,13 @@ Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai
 
 ### Eksperimen #3
 
-**Apa yang diubah dari baseline:**  
-> Mengubah hidden neurons dari `64` menjadi `128`, optimizer menjadi `adam`, dan menggunakan activation function `tanh`.
+**Apa yang diubah:**
 
-**Hipotesis sebelum run:**  
-> Penambahan jumlah neuron dapat meningkatkan kemampuan model dalam mempelajari pola data yang lebih kompleks. Activation function tanh diperkirakan mampu membantu distribusi data menjadi lebih stabil sehingga akurasi model meningkat.
+**Hipotesis:**
 
-**Hasil:**  
-- Test accuracy: ~10%  
-- Train accuracy: ~12%  
-- Validation accuracy: ~11%  
-- Train time: ~327 detik  
-- Apakah overfit/underfit?: model mengalami underfitting karena akurasi train dan validation sangat rendah.
+**Hasil:**
 
-**Observasi & Insight:**  
-> Kombinasi parameter pada eksperimen ini tidak cocok untuk dataset yang digunakan. LR yang terlalu besar (`0.1`) membuat proses training tidak stabil sehingga model gagal menemukan pola dengan baik. Hal ini menyebabkan akurasi turun drastis meskipun jumlah neuron sudah ditingkatkan.
-
-**Rencana eksperimen berikutnya:**  
-> Saya akan menurunkan learning rate dan mencoba activation function lain seperti ReLU agar model dapat belajar lebih stabil. Selain itu dropout akan ditambahkan untuk menjaga generalisasi model.
+**Observasi:**
 
 ---
 
