@@ -45,10 +45,10 @@ Gunakan template di bawah untuk SETIAP eksperimen.
 - Apakah overfit/underfit? tidak ada ovefit ataupun underfit dari hasil training model ini.
 
 **Observasi & Insight:**
->
+> LR kecil cocok untuk model ini, karena model menunjukkan bahwa model sedang belajar dengan efektif dan bergerak menuju solusi optimal tanpa overshooting atau kesulitan menemukan arah, hasilnya model dapat menghasilkan akurasi yang lebih tinggi daripada hasil sebelumnya 
 
 **Rencana eksperimen berikutnya:**
->
+> Optimizer saya ubah menjadi adam karena optimizer adam seringkali memberikan kinerja yang sangat baik dalam model yang sudah memberikan akurasi baik, epoch saya naikkan agar model dapat belajar lebih dalam dan memperbaiki kesalahan model, meningkatkan neuron per layer menjadi 512 agar kapasitas pembelajaran model lebih optimal.
 
 ---
 
