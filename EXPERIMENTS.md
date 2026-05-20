@@ -32,17 +32,17 @@ Gunakan template di bawah untuk SETIAP eksperimen.
 ### Eksperimen #1
 
 **Apa yang diubah dari baseline:**
-> Contoh: Mengganti optimizer dari `sgd` → `adam`, sisanya tetap.
+> Mengganti LR dari 0.1 ke 0.0001
 
 **Hipotesis sebelum run:**
-> Contoh: Adam adalah optimizer adaptif, kami menduga konvergensi akan lebih cepat dan akurasi naik.
+> LR yang tinggi dapat menyebabkan model 'melompati' titik optimal selama pelatihan, sehingga model tidak pernah mencapai akurasi terbaiknya, saya mengubah LR 0.0001 agar model lebih optimal dalam pelatihan sehingga mencapai akurasi yang lebih tinggi.
 
 **Hasil:**
-- Test accuracy: ___%
-- Train accuracy: ___%
-- Validation accuracy: ___%
-- Train time: ___ detik
-- Apakah overfit/underfit? ___
+- Test accuracy: ~87%
+- Train accuracy: ~87%
+- Validation accuracy: ~88%
+- Train time: ~161 detik
+- Apakah overfit/underfit? tidak ada ovefit ataupun underfit dari hasil training model ini.
 
 **Observasi & Insight:**
 >
