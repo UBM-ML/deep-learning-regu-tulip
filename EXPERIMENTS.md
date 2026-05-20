@@ -16,7 +16,7 @@ Isi tabel ini setelah selesai semua eksperimen.
 | 1 |   4    | 256     |   selu     |  adamax   |   0.1  |   128 |  20    |  0.3    |  ~64%    |  ~176s     |
 | 2 |  2     | 64      |    tanh    |   adam    | 0.0001 |  16   |   5    |  0.1    |   ~85%   |   ~50s     |
 | 3 |   2    | 128     |     tanh   |   adam    |   0.1  |   16  |  20    |  0.1    |    ~10%  |  ~327s     |
-| 4 |    4    |    64     |       sigmoid     |    adam       |   0.01     |    32   |     10  |     0.3    |    ~85%      |       ~53s     |
+| 4 |    4   |  64     |   sigmoid  |    adam   |   0.01 |  32   |    10  |  0.3    |  ~85%    |   ~53s     |
 | 5 |        |         |            |           |        |       |        |         |          |            |
 
 > **Eksperimen #0** = baseline (jangan ubah, ini patokan kalian).
@@ -74,27 +74,50 @@ Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai
 
 ### Eksperimen #3
 
-**Apa yang diubah:**
+**Apa yang diubah dari baseline:**  
+> Mengubah hidden neurons dari `64` menjadi `128`, optimizer menjadi `adam`, dan menggunakan activation function `tanh`.
 
-**Hipotesis:**
+**Hipotesis sebelum run:**  
+> Penambahan jumlah neuron dapat meningkatkan kemampuan model dalam mempelajari pola data yang lebih kompleks. Activation function tanh diperkirakan mampu membantu distribusi data menjadi lebih stabil sehingga akurasi model meningkat.
 
-**Hasil:**
+**Hasil:**  
+- Test accuracy: ~10%  
+- Train accuracy: ~12%  
+- Validation accuracy: ~11%  
+- Train time: ~327 detik  
+- Apakah overfit/underfit?: model mengalami underfitting karena akurasi train dan validation sangat rendah.
 
-**Observasi:**
+**Observasi & Insight:**  
+> Kombinasi parameter pada eksperimen ini tidak cocok untuk dataset yang digunakan. LR yang terlalu besar (`0.1`) membuat proses training tidak stabil sehingga model gagal menemukan pola dengan baik. Hal ini menyebabkan akurasi turun drastis meskipun jumlah neuron sudah ditingkatkan.
+
+**Rencana eksperimen berikutnya:**  
+> Saya akan menurunkan learning rate dan mencoba activation function lain seperti ReLU agar model dapat belajar lebih stabil. Selain itu dropout akan ditambahkan untuk menjaga generalisasi model.
 
 ---
 
 ### Eksperimen #4
 
-**Apa yang diubah:**
+**Apa yang diubah dari baseline:**  
+> Menggunakan `4 hidden layer`, activation function `sigmoid`, optimizer `adam`, serta dropout `0.3`.
 
-**Hipotesis:**
+**Hipotesis sebelum run:**  
+> Penambahan hidden layer diharapkan dapat meningkatkan kemampuan model dalam mengenali pola yang lebih kompleks. Dropout digunakan untuk mengurangi kemungkinan overfitting selama training.
 
-**Hasil:**
+**Hasil:**  
+- Test accuracy: ~85%  
+- Train accuracy: ~84%  
+- Validation accuracy: ~85%  
+- Train time: ~53 detik  
+- Apakah overfit/underfit?: tidak terdapat overfitting maupun underfitting karena performa train dan validation masih stabil.
 
-**Observasi:**
+**Observasi & Insight:**  
+> Penambahan layer dan dropout memberikan hasil yang cukup stabil. Namun activation sigmoid membuat proses pembelajaran tidak secepat ReLU sehingga peningkatan akurasi tidak terlalu signifikan dibanding eksperimen sebelumnya.
+
+**Rencana eksperimen berikutnya:**  
+> Saya akan mencoba kombinasi hidden layer lebih dalam dengan activation ReLU dan dropout lebih kecil agar model tetap stabil tetapi dapat belajar lebih cepat dan optimal.
 
 ---
+
 
 ### Eksperimen #5
 
