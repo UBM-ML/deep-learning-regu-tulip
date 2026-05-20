@@ -68,7 +68,7 @@ Gunakan template di bawah untuk SETIAP eksperimen.
 - Apakah overfit/underfit? tidak ada ovefit ataupun underfit dari hasil training model ini.
 
 **Observasi:**
-Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai performa baseline (~85%). Hal ini menunjukkan bahwa kombinasi optimizer Adam dan fungsi aktivasi tanh membuat model belajar dengan cukup efisien. Grafik pergerakan loss dan accuracy terlihat mulus. Kurva antara data train dan validation saling berhimpitan, menandakan bahwa dropout 0.1 berhasil menjaga model agar dapat menggeneralisasi data dengan baik. Karena grafik loss masih menunjukkan tren menurun di akhir epoch ke-5 tanpa tanda-tanda memisah dari kurva validasi, model ini kemungkinan belum mencapai performa maksimalnya. Menambah jumlah epochs pada eksperimen selanjutnya dapat memberikan ruang lebih bagi model untuk mencapai akurasi yang lebih tinggi.
+> Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai performa baseline (~85%). Hal ini menunjukkan bahwa kombinasi optimizer Adam dan fungsi aktivasi tanh membuat model belajar dengan cukup efisien. Grafik pergerakan loss dan accuracy terlihat mulus. Kurva antara data train dan validation saling berhimpitan, menandakan bahwa dropout 0.1 berhasil menjaga model agar dapat menggeneralisasi data dengan baik. Karena grafik loss masih menunjukkan tren menurun di akhir epoch ke-5 tanpa tanda-tanda memisah dari kurva validasi, model ini kemungkinan belum mencapai performa maksimalnya. Menambah jumlah epochs pada eksperimen selanjutnya dapat memberikan ruang lebih bagi model untuk mencapai akurasi yang lebih tinggi.
 
 ---
 
