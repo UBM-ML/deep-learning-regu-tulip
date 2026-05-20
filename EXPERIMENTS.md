@@ -102,9 +102,6 @@ Meskipun epochs dipotong menjadi setengahnya (5 epochs), model berhasil menyamai
 **Observasi & Insight:**  
 > Penambahan layer dan dropout memberikan hasil yang cukup stabil. Namun activation sigmoid membuat proses pembelajaran tidak secepat ReLU sehingga peningkatan akurasi tidak terlalu signifikan dibanding eksperimen sebelumnya.
 
-**Rencana eksperimen berikutnya:**  
-> Saya akan mencoba kombinasi hidden layer lebih dalam dengan activation ReLU dan dropout lebih kecil agar model tetap stabil tetapi dapat belajar lebih cepat dan optimal.
-
 ---
 
 
